@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consulta de aulas | SISGED</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="header-container">
+    <a href="index.html" class="logo-area" aria-label="SISGED - Página inicial">
+      <img src="img/logo.png" alt="SESI e SENAI" class="institution-logo">
+      <h3 class="netindex">SISGED - HORTO</h3>
+    </a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+    <label for="menu-toggle" class="menu-button" aria-hidden="true">☰</label>
+    <nav class="navigation" aria-label="Menu principal"><a href="index.html">Início</a><a href="consulta.html" class="active">Consultas</a><a href="instrutores.html">Instrutores</a><a href="informacoes.html">Turmas, matérias e salas</a></nav>
+  </div>
+</header>
+<main class="page-main"><div class="container">
+<nav class="breadcrumb"><a href="index.html">Início</a><span>/</span><strong>Consulta de aulas</strong></nav>
+<div class="page-title"><span class="section-label">CONSULTAS</span><h1>Consulta de aulas</h1>
+<p>Escolha os filtros: a tabela é atualizada na hora, sem recarregar a página.</p></div>
+<section class="filter-card"><div class="card-header"><div><h2>Filtros de pesquisa</h2><p>Data, período, turma, instrutor e situação.</p></div></div>
+<form aria-label="Filtros para consulta de aulas">
+<div class="form-group"><label for="data">Data da aula</label><select id="data"><option value="">- Todas -</option><option value="2026-09-01">01/09/2026</option><option value="2026-09-02">02/09/2026</option><option value="2026-09-03">03/09/2026</option><option value="2026-09-04">04/09/2026</option><option value="2026-09-05">05/09/2026</option></select></div>
+<div class="form-group"><label for="periodo">Período</label><select id="periodo"><option value="">- Todos -</option><option value="manha">Manhã</option><option value="tarde">Tarde</option><option value="noite">Noite</option></select></div>
+<div class="form-group"><label for="turma">Turma</label><select id="turma"><option value="">- Todas -</option><option value="101">Turma 101 - Manhã</option><option value="102">Turma 102 - Tarde</option><option value="103">Turma 103 - Noite</option></select></div>
+<div class="form-group"><label for="instrutor">Instrutor</label><select id="instrutor"><option value="">- Todos -</option><option value="1">Tubinho</option><option value="2">Guidu Ratu</option><option value="3">Migles Belo</option><option value="4">Edson Paulo Nascimento</option></select></div>
+<div class="form-group"><label for="situacao">Situação</label><select id="situacao"><option value="">- Todas -</option><option value="realizada">Realizada</option><option value="nao_realizada">Não realizada</option></select></div>
+<div class="form-actions"><button type="reset" class="button button-secondary">Limpar filtros</button></div>
+</form></section>
+<section class="results-section resultados"><div class="section-heading"><div><span class="section-label">RESULTADO</span><h2>Resultados da consulta</h2></div></div>
+<div class="table-container"><table>
+<thead><tr><th>Data</th><th>Horário</th><th>Turma</th><th>Instrutor</th><th>Matéria</th><th>Sala</th><th>Situação</th></tr></thead>
+<tbody>
+<tr data-data="2026-09-01" data-periodo="manha" data-turma="101" data-instrutor="1" data-situacao="realizada"><td>01/09/2026</td><td>07:00 - 08:40</td><td>101</td><td>Tubinho</td><td>Redes de Computadores</td><td>Laboratório 01</td><td><span class="badge badge-success">Realizada</span></td></tr>
+<tr data-data="2026-09-01" data-periodo="tarde" data-turma="102" data-instrutor="3" data-situacao="realizada"><td>01/09/2026</td><td>13:00 - 14:40</td><td>102</td><td>Migles Belo</td><td>Banco de Dados</td><td>Laboratório 02</td><td><span class="badge badge-success">Realizada</span></td></tr>
+<tr data-data="2026-09-01" data-periodo="noite" data-turma="103" data-instrutor="4" data-situacao="nao_realizada"><td>01/09/2026</td><td>18:30 - 20:10</td><td>103</td><td>Edson Paulo Nascimento</td><td>Desenvolvimento Web</td><td>Sala 101</td><td><span class="badge badge-danger">Não realizada</span></td></tr>
+<tr data-data="2026-09-02" data-periodo="manha" data-turma="101" data-instrutor="1" data-situacao="realizada"><td>02/09/2026</td><td>07:00 - 08:40</td><td>101</td><td>Tubinho</td><td>Redes de Computadores</td><td>Laboratório 01</td><td><span class="badge badge-success">Realizada</span></td></tr>
+<tr data-data="2026-09-02" data-periodo="tarde" data-turma="102" data-instrutor="3" data-situacao="realizada"><td>02/09/2026</td><td>13:00 - 14:40</td><td>102</td><td>Migles Belo</td><td>Banco de Dados</td><td>Laboratório 02</td><td><span class="badge badge-success">Realizada</span></td></tr>
+<tr data-data="2026-09-02" data-periodo="noite" data-turma="103" data-instrutor="4" data-situacao="nao_realizada"><td>02/09/2026</td><td>18:30 - 20:10</td><td>103</td><td>Edson Paulo Nascimento</td><td>Desenvolvimento Web</td><td>Sala 101</td><td><span class="badge badge-danger">Não realizada</span></td></tr>
+<tr data-data="2026-09-03" data-periodo="manha" data-turma="101" data-instrutor="2" data-situacao="realizada"><td>03/09/2026</td><td>08:50 - 10:30</td><td>101</td><td>Guidu Ratu</td><td>Programação</td><td>Laboratório 02</td><td><span class="badge badge-success">Realizada</span></td></tr>
+<tr data-data="2026-09-04" data-periodo="tarde" data-turma="102" data-instrutor="1" data-situacao="nao_realizada"><td>04/09/2026</td><td>14:50 - 16:30</td><td>102</td><td>Tubinho</td><td>Sistemas Operacionais</td><td>Laboratório 01</td><td><span class="badge badge-danger">Não realizada</span></td></tr>
+<tr data-data="2026-09-05" data-periodo="noite" data-turma="103" data-instrutor="1" data-situacao="nao_realizada"><td>05/09/2026</td><td>20:20 - 22:00</td><td>103</td><td>Tubinho</td><td>Lógica de Programação</td><td>Sala 101</td><td><span class="badge badge-danger">Não realizada</span></td></tr>
+</tbody></table></div>
+<p class="total-linhas" aria-live="polite"></p></section>
+</div></main>
+<footer class="footer"><div class="container"><p>SISGED - Horto</p><span>Sistema institucional SESI/SENAI</span></div></footer>
+</body>
+</html>
