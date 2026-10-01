@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastrar Aula | SISGED</title>
+<link rel="stylesheet" href="../public/style.css">
+<script src="../public/db.js"></script>
+</head>
+<body>
+<header class="header"><div class="header-container"><a href="index.html" class="logo-area" aria-label="SISGED - Página inicial"><img src="../public/img/logo.png" alt="SESI e SENAI" class="institution-logo"><h3 class="netindex">SISGED - HORTO</h3></a><button type="button" class="menu-button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">☰</button><nav class="navigation" id="menu-principal"><a href="index.html">Início</a><a href="cadastrar_aula.html" class="active">Cadastrar aula</a><a href="cadastrar_instrutor.html">Instrutores</a><a href="consulta.html">Consultas</a></nav></div></header>
+<main class="page-main"><div class="container">
+<div class="page-title"><span class="section-label">CADASTRO</span><h1>Cadastrar aula</h1><p>As aulas cadastradas ficam disponíveis nas consultas de administrador, instrutor e aluno.</p></div>
+<div id="msg-ok" class="form-message success" style="display:none"></div>
+<div id="msg-erro" class="form-message error" style="display:none"></div>
+<section class="filter-card"><form id="aula-form">
+<div class="form-group"><label for="dataAula">Data da aula</label><input type="date" id="dataAula" name="dataAula" required></div>
+<div class="form-group"><label for="turnoAula">Período</label><select id="turnoAula" name="turnoAula" required><option value="">- Selecione -</option><option>Manhã</option><option>Tarde</option><option>Noite</option></select></div>
+<div class="form-group"><label for="horarioinicioAula">Horário inicial</label><input type="time" id="horarioinicioAula" name="horarioinicioAula" required></div>
+<div class="form-group"><label for="horariofimAula">Horário final</label><input type="time" id="horariofimAula" name="horariofimAula" required></div>
+<div class="form-group"><label for="idInstrutor">Instrutor</label><select id="idInstrutor" name="idInstrutor" required><option value="">- Selecione -</option></select></div>
+<div class="form-group"><label for="idMateria">Matéria</label><select id="idMateria" name="idMateria" required><option value="">- Selecione -</option></select></div>
+<div class="form-group"><label for="idTurma">Turma</label><select id="idTurma" name="idTurma" required><option value="">- Selecione -</option></select></div>
+<div class="form-group"><label for="idSala">Sala</label><select id="idSala" name="idSala"><option value="">- Sem sala definida -</option></select></div>
+<div class="form-group"><label for="tipoAula">Tipo de aula</label><select id="tipoAula" name="tipoAula"><option>Presencial</option><option>Online</option><option>Híbrida</option></select></div>
+<div class="form-group"><label for="statusAula">Situação</label><select id="statusAula" name="statusAula"><option value="1">Realizada</option><option value="0">Não realizada</option></select></div>
+<div class="form-actions"><button type="submit" class="button button-primary">Registrar aula</button><a href="consulta.html" class="button button-secondary">Ir para consultas</a></div>
+</form></section></div></main>
+<script src="../public/cadastros.js"></script>
+</body></html>
